@@ -1,5 +1,5 @@
-Usernam: admin
+Username: admin
 Password: 123
 
-Usernam: emp
+Username: emp
 Password: 123
