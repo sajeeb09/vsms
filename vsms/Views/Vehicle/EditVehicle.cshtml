@@ -1,0 +1,107 @@
+﻿@model VSMS.Data.vehicle
+
+@{
+    ViewBag.Title = "EditVehicle";
+    Layout = "~/Views/Shared/admin_layout.cshtml";
+}
+
+<h2>EditVehicle</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>vehicle</legend>
+
+        @Html.HiddenFor(model => model.vehicleId)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.model)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.model)
+            @Html.ValidationMessageFor(model => model.model)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.chasisNo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.chasisNo)
+            @Html.ValidationMessageFor(model => model.chasisNo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.vehiclebrand)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(model => model.vehiclebrand, ViewBag.mod as SelectList)
+            @Html.ValidationMessageFor(model => model.vehiclebrand)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.vehiclemanufacturar)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(model => model.vehiclemanufacturar, ViewBag.man as SelectList)
+            @Html.ValidationMessageFor(model => model.vehiclemanufacturar)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.mYear)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.mYear)
+            @Html.ValidationMessageFor(model => model.mYear)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.color)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.color)
+            @Html.ValidationMessageFor(model => model.color)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.engineNo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.engineNo)
+            @Html.ValidationMessageFor(model => model.engineNo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.status)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.status)
+            @Html.ValidationMessageFor(model => model.status)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.bdate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.bdate)
+            @Html.ValidationMessageFor(model => model.bdate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.bprice)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.bprice)
+            @Html.ValidationMessageFor(model => model.bprice)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

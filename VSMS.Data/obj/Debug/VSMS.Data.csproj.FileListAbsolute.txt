@@ -1,0 +1,89 @@
+C:\Users\void\Documents\Visual Studio 2013\Projects\vsms\VSMS.Data\bin\Debug\VSMS.Data.dll.config
+C:\Users\void\Documents\Visual Studio 2013\Projects\vsms\VSMS.Data\bin\Debug\VSMS.Data.dll
+C:\Users\void\Documents\Visual Studio 2013\Projects\vsms\VSMS.Data\bin\Debug\VSMS.Data.pdb
+C:\Users\void\Documents\Visual Studio 2013\Projects\vsms\VSMS.Data\bin\Debug\EntityFramework.dll
+C:\Users\void\Documents\Visual Studio 2013\Projects\vsms\VSMS.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\void\Documents\Visual Studio 2013\Projects\vsms\VSMS.Data\bin\Debug\EntityFramework.xml
+C:\Users\void\Documents\Visual Studio 2013\Projects\vsms\VSMS.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\void\Documents\Visual Studio 2013\Projects\vsms\VSMS.Data\obj\Debug\VSMS.Data.Migrations._23.resources
+C:\Users\void\Documents\Visual Studio 2013\Projects\vsms\VSMS.Data\obj\Debug\VSMS.Data.csproj.GenerateResource.Cache
+C:\Users\void\Documents\Visual Studio 2013\Projects\vsms\VSMS.Data\obj\Debug\VSMS.Data.dll
+C:\Users\void\Documents\Visual Studio 2013\Projects\vsms\VSMS.Data\obj\Debug\VSMS.Data.pdb
+C:\Users\void\Documents\Visual Studio 2013\Projects\vsms\VSMS.Data\bin\Debug\Elmah.dll
+C:\Users\void\Documents\Visual Studio 2013\Projects\vsms\VSMS.Data\bin\Debug\TugberkUg.MVC.dll
+C:\Users\void\Documents\Visual Studio 2013\Projects\vsms\VSMS.Data\obj\Debug\VSMS.Data.csprojResolveAssemblyReference.cache
+C:\Users\void\Downloads\Compressed\vsms\VSMS.Data\bin\Debug\VSMS.Data.dll.config
+C:\Users\void\Downloads\Compressed\vsms\VSMS.Data\bin\Debug\VSMS.Data.dll
+C:\Users\void\Downloads\Compressed\vsms\VSMS.Data\bin\Debug\VSMS.Data.pdb
+C:\Users\void\Downloads\Compressed\vsms\VSMS.Data\bin\Debug\Elmah.dll
+C:\Users\void\Downloads\Compressed\vsms\VSMS.Data\bin\Debug\EntityFramework.dll
+C:\Users\void\Downloads\Compressed\vsms\VSMS.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\void\Downloads\Compressed\vsms\VSMS.Data\bin\Debug\TugberkUg.MVC.dll
+C:\Users\void\Downloads\Compressed\vsms\VSMS.Data\bin\Debug\EntityFramework.xml
+C:\Users\void\Downloads\Compressed\vsms\VSMS.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\void\Downloads\Compressed\vsms\VSMS.Data\obj\Debug\VSMS.Data.Migrations._2kkasd222ssd.resources
+C:\Users\void\Downloads\Compressed\vsms\VSMS.Data\obj\Debug\VSMS.Data.Migrations.asllr.resources
+C:\Users\void\Downloads\Compressed\vsms\VSMS.Data\obj\Debug\VSMS.Data.csproj.GenerateResource.Cache
+C:\Users\void\Downloads\Compressed\vsms\VSMS.Data\obj\Debug\VSMS.Data.dll
+C:\Users\void\Downloads\Compressed\vsms\VSMS.Data\obj\Debug\VSMS.Data.pdb
+C:\Users\09\OneDrive\ASP.NET\Project\vsms\VSMS.Data\bin\Debug\VSMS.Data.dll.config
+C:\Users\09\OneDrive\ASP.NET\Project\vsms\VSMS.Data\bin\Debug\VSMS.Data.dll
+C:\Users\09\OneDrive\ASP.NET\Project\vsms\VSMS.Data\bin\Debug\VSMS.Data.pdb
+C:\Users\09\OneDrive\ASP.NET\Project\vsms\VSMS.Data\bin\Debug\Elmah.dll
+C:\Users\09\OneDrive\ASP.NET\Project\vsms\VSMS.Data\bin\Debug\EntityFramework.dll
+C:\Users\09\OneDrive\ASP.NET\Project\vsms\VSMS.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\09\OneDrive\ASP.NET\Project\vsms\VSMS.Data\bin\Debug\TugberkUg.MVC.dll
+C:\Users\09\OneDrive\ASP.NET\Project\vsms\VSMS.Data\bin\Debug\EntityFramework.xml
+C:\Users\09\OneDrive\ASP.NET\Project\vsms\VSMS.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\09\OneDrive\ASP.NET\Project\vsms\VSMS.Data\obj\Debug\VSMS.Data.Migrations._2kkasd222ssd.resources
+C:\Users\09\OneDrive\ASP.NET\Project\vsms\VSMS.Data\obj\Debug\VSMS.Data.Migrations.asllr.resources
+C:\Users\09\OneDrive\ASP.NET\Project\vsms\VSMS.Data\obj\Debug\VSMS.Data.Migrations.abc.resources
+C:\Users\09\OneDrive\ASP.NET\Project\vsms\VSMS.Data\obj\Debug\VSMS.Data.Migrations.asdasdasdasdas.resources
+C:\Users\09\OneDrive\ASP.NET\Project\vsms\VSMS.Data\obj\Debug\VSMS.Data.csproj.GenerateResource.Cache
+C:\Users\09\OneDrive\ASP.NET\Project\vsms\VSMS.Data\obj\Debug\VSMS.Data.dll
+C:\Users\09\OneDrive\ASP.NET\Project\vsms\VSMS.Data\obj\Debug\VSMS.Data.pdb
+C:\Users\09\OneDrive\ASP.NET\Project\vsms\VSMS.Data\obj\Debug\VSMS.Data.csprojResolveAssemblyReference.cache
+C:\Users\09\OneDrive\ASP.NET\Project\vsms\VSMS.Data\obj\Debug\VSMS.Data.Migrations.abc1.resources
+C:\Users\09\OneDrive\ASP.NET\Project\vsms\VSMS.Data\obj\Debug\VSMS.Data.Migrations.a.resources
+C:\Users\void\Downloads\Compressed\vsms\vsms-sajib\VSMS.Data\bin\Debug\VSMS.Data.dll.config
+C:\Users\void\Downloads\Compressed\vsms\vsms-sajib\VSMS.Data\bin\Debug\VSMS.Data.dll
+C:\Users\void\Downloads\Compressed\vsms\vsms-sajib\VSMS.Data\bin\Debug\VSMS.Data.pdb
+C:\Users\void\Downloads\Compressed\vsms\vsms-sajib\VSMS.Data\bin\Debug\Elmah.dll
+C:\Users\void\Downloads\Compressed\vsms\vsms-sajib\VSMS.Data\bin\Debug\EntityFramework.dll
+C:\Users\void\Downloads\Compressed\vsms\vsms-sajib\VSMS.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\void\Downloads\Compressed\vsms\vsms-sajib\VSMS.Data\bin\Debug\TugberkUg.MVC.dll
+C:\Users\void\Downloads\Compressed\vsms\vsms-sajib\VSMS.Data\bin\Debug\EntityFramework.xml
+C:\Users\void\Downloads\Compressed\vsms\vsms-sajib\VSMS.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\void\Downloads\Compressed\vsms\vsms-sajib\VSMS.Data\obj\Debug\VSMS.Data.csprojResolveAssemblyReference.cache
+C:\Users\void\Downloads\Compressed\vsms\vsms-sajib\VSMS.Data\obj\Debug\VSMS.Data.Migrations._2kkasd222ssd.resources
+C:\Users\void\Downloads\Compressed\vsms\vsms-sajib\VSMS.Data\obj\Debug\VSMS.Data.Migrations.asllr.resources
+C:\Users\void\Downloads\Compressed\vsms\vsms-sajib\VSMS.Data\obj\Debug\VSMS.Data.Migrations.abc.resources
+C:\Users\void\Downloads\Compressed\vsms\vsms-sajib\VSMS.Data\obj\Debug\VSMS.Data.Migrations.asdasdasdasdas.resources
+C:\Users\void\Downloads\Compressed\vsms\vsms-sajib\VSMS.Data\obj\Debug\VSMS.Data.Migrations.abc1.resources
+C:\Users\void\Downloads\Compressed\vsms\vsms-sajib\VSMS.Data\obj\Debug\VSMS.Data.Migrations.a.resources
+C:\Users\void\Downloads\Compressed\vsms\vsms-sajib\VSMS.Data\obj\Debug\VSMS.Data.Migrations._3434kkasd.resources
+C:\Users\void\Downloads\Compressed\vsms\vsms-sajib\VSMS.Data\obj\Debug\VSMS.Data.csproj.GenerateResource.Cache
+C:\Users\void\Downloads\Compressed\vsms\vsms-sajib\VSMS.Data\obj\Debug\VSMS.Data.dll
+C:\Users\void\Downloads\Compressed\vsms\vsms-sajib\VSMS.Data\obj\Debug\VSMS.Data.pdb
+C:\Users\void\Downloads\Compressed\vsms\vsms-sajib\VSMS.Data\obj\Debug\VSMS.Data.Migrations.as2323.resources
+C:\Users\sajee\OneDrive\ASP.NET\vsms\vsms-ATP 2 .net\VSMS.Data\bin\Debug\VSMS.Data.dll.config
+C:\Users\sajee\OneDrive\ASP.NET\vsms\vsms-ATP 2 .net\VSMS.Data\bin\Debug\VSMS.Data.dll
+C:\Users\sajee\OneDrive\ASP.NET\vsms\vsms-ATP 2 .net\VSMS.Data\bin\Debug\VSMS.Data.pdb
+C:\Users\sajee\OneDrive\ASP.NET\vsms\vsms-ATP 2 .net\VSMS.Data\bin\Debug\Elmah.dll
+C:\Users\sajee\OneDrive\ASP.NET\vsms\vsms-ATP 2 .net\VSMS.Data\bin\Debug\EntityFramework.dll
+C:\Users\sajee\OneDrive\ASP.NET\vsms\vsms-ATP 2 .net\VSMS.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sajee\OneDrive\ASP.NET\vsms\vsms-ATP 2 .net\VSMS.Data\bin\Debug\TugberkUg.MVC.dll
+C:\Users\sajee\OneDrive\ASP.NET\vsms\vsms-ATP 2 .net\VSMS.Data\bin\Debug\EntityFramework.xml
+C:\Users\sajee\OneDrive\ASP.NET\vsms\vsms-ATP 2 .net\VSMS.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sajee\OneDrive\ASP.NET\vsms\vsms-ATP 2 .net\VSMS.Data\obj\Debug\VSMS.Data.csprojResolveAssemblyReference.cache
+C:\Users\sajee\OneDrive\ASP.NET\vsms\vsms-ATP 2 .net\VSMS.Data\obj\Debug\VSMS.Data.Migrations._2kkasd222ssd.resources
+C:\Users\sajee\OneDrive\ASP.NET\vsms\vsms-ATP 2 .net\VSMS.Data\obj\Debug\VSMS.Data.Migrations.asllr.resources
+C:\Users\sajee\OneDrive\ASP.NET\vsms\vsms-ATP 2 .net\VSMS.Data\obj\Debug\VSMS.Data.Migrations.abc.resources
+C:\Users\sajee\OneDrive\ASP.NET\vsms\vsms-ATP 2 .net\VSMS.Data\obj\Debug\VSMS.Data.Migrations.asdasdasdasdas.resources
+C:\Users\sajee\OneDrive\ASP.NET\vsms\vsms-ATP 2 .net\VSMS.Data\obj\Debug\VSMS.Data.Migrations.abc1.resources
+C:\Users\sajee\OneDrive\ASP.NET\vsms\vsms-ATP 2 .net\VSMS.Data\obj\Debug\VSMS.Data.Migrations.a.resources
+C:\Users\sajee\OneDrive\ASP.NET\vsms\vsms-ATP 2 .net\VSMS.Data\obj\Debug\VSMS.Data.Migrations._3434kkasd.resources
+C:\Users\sajee\OneDrive\ASP.NET\vsms\vsms-ATP 2 .net\VSMS.Data\obj\Debug\VSMS.Data.Migrations.as2323.resources
+C:\Users\sajee\OneDrive\ASP.NET\vsms\vsms-ATP 2 .net\VSMS.Data\obj\Debug\VSMS.Data.csproj.GenerateResource.Cache
+C:\Users\sajee\OneDrive\ASP.NET\vsms\vsms-ATP 2 .net\VSMS.Data\obj\Debug\VSMS.Data.dll
+C:\Users\sajee\OneDrive\ASP.NET\vsms\vsms-ATP 2 .net\VSMS.Data\obj\Debug\VSMS.Data.pdb

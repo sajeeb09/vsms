@@ -1,0 +1,156 @@
+﻿@model VSMS.Data.customer
+
+@{
+    ViewBag.Title = "Sell";
+    Layout = "~/Views/Shared/admin_layout.cshtml";
+}
+
+<h2>Add Customer Details to Sell</h2>
+<br><br>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <div class="row">
+            <div class="form-group col-md-2">
+                @Html.LabelFor(model => model.fName)
+            </div>
+            <div class="form-group col-md-2">
+                @Html.EditorFor(model => model.fName)
+                @Html.ValidationMessageFor(model => model.fName)
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-2">
+                @Html.LabelFor(model => model.lName)
+            </div>
+            <div class="form-group col-md-2">
+                @Html.EditorFor(model => model.lName)
+                @Html.ValidationMessageFor(model => model.lName)
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-2">
+                @Html.LabelFor(model => model.mobile)
+            </div>
+            <div class="form-group col-md-2">
+                @Html.EditorFor(model => model.mobile)
+                @Html.ValidationMessageFor(model => model.mobile)
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="form-group col-md-2">
+                @Html.LabelFor(model => model.email)
+            </div>
+            <div class="form-group col-md-2">
+                @Html.EditorFor(model => model.email)
+                @Html.ValidationMessageFor(model => model.email)
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-2">
+                @Html.LabelFor(model => model.address)
+            </div>
+            <div class="form-group col-md-2">
+                @Html.EditorFor(model => model.address)
+                @Html.ValidationMessageFor(model => model.address)
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-2">
+                @Html.LabelFor(model => model.insuranceCompany)
+            </div>
+            <div class="form-group col-md-2">
+                @Html.EditorFor(model => model.insuranceCompany)
+                @Html.ValidationMessageFor(model => model.insuranceCompany)
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-2">
+                @Html.LabelFor(model => model.insuranceId)
+            </div>
+            <div class="form-group col-md-2">
+                @Html.EditorFor(model => model.insuranceId)
+                @Html.ValidationMessageFor(model => model.insuranceId)
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-2">
+                @Html.LabelFor(model => model.warrentyS)
+            </div>
+            <div class="form-group col-md-2">
+                @Html.EditorFor(model => model.warrentyS)
+                @Html.ValidationMessageFor(model => model.warrentyS)
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-2">
+                @Html.LabelFor(model => model.warrentyE)
+            </div>
+            <div class="form-group col-md-2">
+                @Html.EditorFor(model => model.warrentyE)
+                @Html.ValidationMessageFor(model => model.warrentyE)
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-2">
+                @Html.LabelFor(model => model.vehicleId)
+            </div>
+            <div class="form-group col-md-2">
+                @Html.TextBoxFor(model => model.vehicleId, new { @Value = @ViewBag.VehicleId, @Readonly = true })
+                @Html.ValidationMessageFor(model => model.vehicleId)
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-2">
+                @Html.LabelFor(model => model.sprice)
+            </div>
+            <div class="form-group col-md-2">
+                @Html.EditorFor(model => model.sprice)
+                @Html.ValidationMessageFor(model => model.sprice)
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-2">
+                @Html.LabelFor(model => model.paymentType)
+            </div>
+            <div class="form-group col-md-2">
+                @{List<SelectListItem> listItems = new List<SelectListItem>();
+                listItems.Add(
+                    new SelectListItem
+                    {
+                        Text = "Cash",
+                        Value = "Cash"
+                    });
+                listItems.Add(
+                    new SelectListItem
+                    {
+                        Text = "Cheque",
+                        Value = "Cheque"
+                    });
+                listItems.Add(
+                    new SelectListItem
+                    {
+                        Text = "Card",
+                        Value = "Card"
+                    });
+                }
+                @Html.DropDownListFor(model => model.paymentType, listItems)
+                @Html.ValidationMessageFor(model => model.paymentType)
+            </div>
+        </div>
+
+        <div class="row">
+            <p>
+                <input class="btn-primary" type="submit" value="Sell" />
+            </p>
+        </div>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

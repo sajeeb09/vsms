@@ -1,0 +1,154 @@
+﻿@{
+    ViewBag.Title = "GetBestSelling";
+    Layout = "~/Views/Shared/admin_layout.cshtml";
+}
+
+<h2>Report Of Vehicles</h2>
+
+<br><br><br><br>
+
+@using VSMS.Data
+
+@{using (VSMSContext db = new VSMSContext())
+{
+    var OrderCounts = db.vehicles
+                               .GroupBy(o => o.vehiclemanufacturar)
+                               .Select(o => new { man = o.Key, Total = o.Count() })
+                               .OrderByDescending(o => o.Total);
+    var OrderCounts2 = db.vehicles
+                                .GroupBy(o => o.vehiclebrand)
+                                .Select(o => new { model = o.Key, Total2 = o.Count() })
+                                .OrderByDescending(o => o.Total2);
+    var OrderCounts3 = db.vehicles
+                                 .Where(o => o.status == "Sold")
+                                 .GroupBy(o => o.vehiclemanufacturar)
+                                 .Select(o => new { manu = o.Key, Total3 = o.Count() })
+                                 .OrderByDescending(o => o.Total3);
+
+
+    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Vehicle Count in Each Manufacturar </button>
+    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal2">Vehicle Count in Each Brand </button>
+    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal3">Sold Vehicle Count in Manufacturar</button>
+
+    <!-- Modal Manufacturar -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Manufacturar Wise Vehicle List</h4>
+                </div>
+                <div class="modal-body">
+
+
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Manufacturar</th>
+                                <th>How Many</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                @foreach (var item in OrderCounts)
+                                {
+                                <tr>
+                                    <td>@Html.DisplayFor(modelItem => item.man)</td>
+                                    <td>@Html.DisplayFor(modelItem => item.Total) </td>
+                                </tr>
+                                }
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+ <!-- Modal Model -->
+        <div id="myModal2" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Brand Wise Vehicle List</h4>
+                    </div>
+                    <div class="modal-body">
+
+
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Manufacturar</th>
+                                    <th>How Many</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    @foreach (var item in OrderCounts2)
+                                    {
+                                    <tr>
+                                        <td>@Html.DisplayFor(modelItem => item.model)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.Total2) </td>
+                                    </tr>
+                                    }
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="myModal3" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Sold Count Manufacturar Wise</h4>
+                        </div>
+                        <div class="modal-body">
+
+
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Manufacturar</th>
+                                        <th>How Many</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        @foreach (var item in OrderCounts3)
+                                        {
+                                        <tr>
+                                            <td>@Html.DisplayFor(modelItem => item.manu)</td>
+                                            <td>@Html.DisplayFor(modelItem => item.Total3) </td>
+                                        </tr>
+                                        }
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+}
+}

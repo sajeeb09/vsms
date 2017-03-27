@@ -1,0 +1,78 @@
+﻿@model IEnumerable<VSMS.Data.vehicle>
+
+@{
+    ViewBag.Title = "Sold";
+    Layout = "~/Views/Shared/admin_layout.cshtml";
+}
+
+<h2>Sold</h2>
+
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.model)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.chasisNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.vehiclebrand)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.vehiclemanufacturar)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mYear)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.color)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.engineNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.bprice)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.model)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.chasisNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.vehiclebrand)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.vehiclemanufacturar)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mYear)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.color)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.engineNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.bprice)
+        </td>
+        <td>
+            @Html.ActionLink("Details", "VehicleDetails", new { id=item.vehicleId }) |
+            @if (@Session["userType"].ToString() == "Admin") {@Html.ActionLink("Delete", "DeleteVehicle", new { id=item.vehicleId })}
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8B3EECA9-9466-47A4-ACAA-A5C7CABFC5E6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VSMS.Data</RootNamespace>
+    <AssemblyName>VSMS.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Elmah, Version=1.2.13605.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\elmah.corelibrary.1.2\lib\Elmah.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TugberkUg.MVC, Version=1.0.4356.29718, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\TugberkUg.MVC.1.0.4356.29718\lib\net40\TugberkUg.MVC.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="brand.cs" />
+    <Compile Include="customer.cs" />
+    <Compile Include="manufacturar.cs" />
+    <Compile Include="Migrations\201612270850501_2kkasd222ssd.cs" />
+    <Compile Include="Migrations\201612270850501_2kkasd222ssd.Designer.cs">
+      <DependentUpon>201612270850501_2kkasd222ssd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612271137087_asllr.cs" />
+    <Compile Include="Migrations\201612271137087_asllr.Designer.cs">
+      <DependentUpon>201612271137087_asllr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612271546169_abc.cs" />
+    <Compile Include="Migrations\201612271546169_abc.Designer.cs">
+      <DependentUpon>201612271546169_abc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612271617505_asdasdasdasdas.cs" />
+    <Compile Include="Migrations\201612271617505_asdasdasdasdas.Designer.cs">
+      <DependentUpon>201612271617505_asdasdasdasdas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612272138551_abc1.cs" />
+    <Compile Include="Migrations\201612272138551_abc1.Designer.cs">
+      <DependentUpon>201612272138551_abc1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612280011450_a.cs" />
+    <Compile Include="Migrations\201612280011450_a.Designer.cs">
+      <DependentUpon>201612280011450_a.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612280722045_3434kkasd.cs" />
+    <Compile Include="Migrations\201612280722045_3434kkasd.Designer.cs">
+      <DependentUpon>201612280722045_3434kkasd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612280911209_as2323.cs" />
+    <Compile Include="Migrations\201612280911209_as2323.Designer.cs">
+      <DependentUpon>201612280911209_as2323.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="user.cs" />
+    <Compile Include="vehicle.cs" />
+    <Compile Include="VSMSContext.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201612270850501_2kkasd222ssd.resx">
+      <DependentUpon>201612270850501_2kkasd222ssd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612271137087_asllr.resx">
+      <DependentUpon>201612271137087_asllr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612271546169_abc.resx">
+      <DependentUpon>201612271546169_abc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612271617505_asdasdasdasdas.resx">
+      <DependentUpon>201612271617505_asdasdasdasdas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612272138551_abc1.resx">
+      <DependentUpon>201612272138551_abc1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612280011450_a.resx">
+      <DependentUpon>201612280011450_a.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612280722045_3434kkasd.resx">
+      <DependentUpon>201612280722045_3434kkasd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612280911209_as2323.resx">
+      <DependentUpon>201612280911209_as2323.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

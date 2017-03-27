@@ -1,0 +1,34 @@
+﻿@model VSMS.Data.brand
+
+@{
+    ViewBag.Title = "DeleteBrand";
+    Layout = "~/Views/Shared/admin_layout.cshtml";
+}
+
+<h2>DeleteBrand</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>brand</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.vehiclebrand)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.vehiclebrand)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.manufacturarId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.manufacturarId)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Brand")
+    </p>
+}

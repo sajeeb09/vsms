@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Admin Dashboard";
+    Layout = "~/Views/Shared/admin_layout.cshtml";
+}
+
+
+
+
+<div class="welcome" style="margin-left: -5%;">
+    @if (Session["userId"] != null)
+{
+    <h1> Hello @Session["userName"].ToString()</h1>
+
+} 
+    <p>Welcome to Vehicle Sales Managemt System</p>
+</div>
+    <div class="row">
+        <div class="col-md-6">
+            <img  class="img-responsive" src="@Url.Action("MostProfit")" alt="Image may contain: pie chart"/>
+        </div>
+
+        <div class="col-md-6">
+            <img class="img-responsive" src="@Url.Action("BoughtvsSold")" alt="Image may contain: pie chart" />
+        </div>
+
+
+    </div>
+
+
+

@@ -1,0 +1,46 @@
+﻿@model VSMS.Data.brand
+
+@{
+    ViewBag.Title = "CreateBrand";
+    Layout = "~/Views/Shared/admin_layout.cshtml";
+}
+
+<div class="col-md-6">
+<h2>Add New Brand</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.vehiclebrand)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.vehiclebrand)
+            @Html.ValidationMessageFor(model => model.vehiclebrand)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.manufacturarId)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(model => model.manufacturarId, ViewBag.manuf as SelectList, "-Select Manufacturar-")
+            @Html.ValidationMessageFor(model => model.manufacturarId)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to Brand List", "Brand")
+</div>
+</div>
+
+<div class="col-md-6">
+
+</div>

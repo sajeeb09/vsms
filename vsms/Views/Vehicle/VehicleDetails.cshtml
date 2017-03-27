@@ -1,0 +1,78 @@
+﻿@model VSMS.Data.vehicle
+
+@{
+    ViewBag.Title = "VehicleDetails";
+    Layout = "~/Views/Shared/admin_layout.cshtml";
+}
+
+<h2>VehicleDetails</h2>
+
+<fieldset>
+    <legend>vehicle</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.model)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.model)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.chasisNo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.chasisNo)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.vehiclebrand)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.vehiclebrand)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.vehiclemanufacturar)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.vehiclemanufacturar)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.mYear)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.mYear)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.color)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.color)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.engineNo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.engineNo)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.status)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.status)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.bprice)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.bprice)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

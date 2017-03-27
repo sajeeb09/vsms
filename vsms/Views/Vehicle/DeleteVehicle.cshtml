@@ -1,0 +1,83 @@
+﻿@model VSMS.Data.vehicle
+
+@{
+    ViewBag.Title = "DeleteVehicle";
+    Layout = "~/Views/Shared/admin_layout.cshtml";
+}
+
+<h2>DeleteVehicle</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>vehicle</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.model)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.model)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.chasisNo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.chasisNo)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.vehiclebrand)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.vehiclebrand)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.vehiclemanufacturar)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.vehiclemanufacturar)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.mYear)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.mYear)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.color)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.color)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.engineNo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.engineNo)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.status)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.status)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.bprice)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.bprice)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

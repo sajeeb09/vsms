@@ -1,0 +1,114 @@
+﻿@model IEnumerable<VSMS.Data.customer>
+
+@{
+    ViewBag.Title = "Customer";
+    Layout = "~/Views/Shared/admin_layout.cshtml";
+}
+
+<h2>Customer Details</h2>
+
+<table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
+    <thead>
+        <tr>
+            <th>Personal Details</th>
+
+            <th>Address</th>
+            <th>Insurance Details</th>
+            <th>Warrenty Start</th>
+            <th>Warrenty End</th>
+            <th>Vehicle</th>
+            <th>Price $</th>
+            <th>Payment</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tfoot>
+        <tr>
+            <th>Personal Details</th>
+
+            <th>Address</th>
+            <th>Insurance Details</th>
+            <th>Warrenty Start</th>
+            <th>Warrenty End</th>
+            <th>Vehicle</th>
+            <th>Price $</th>
+            <th>Payment</th>
+            <th>Action</th>
+        </tr>
+    </tfoot>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.fName) @Html.DisplayFor(modelItem => item.lName)<br>Mobile: @Html.DisplayFor(modelItem => item.mobile)<br>Email: @Html.DisplayFor(modelItem => item.email)</td>
+
+                <td>@Html.DisplayFor(modelItem => item.address) </td>
+                <td>Company: @Html.DisplayFor(modelItem => item.insuranceCompany)<br>@Html.DisplayFor(modelItem => item.insuranceId) </td>
+                <td>@Html.DisplayFor(modelItem => item.warrentyS)</td>
+                <td>@Html.DisplayFor(modelItem => item.warrentyE)</td>
+                <td>@Html.ActionLink(@item.vehicleId.ToString(), "VehicleDetails", new { id = item.vehicleId }, new { @class = "btn btn-success" })</td>
+                <td>@Html.DisplayFor(modelItem => item.sprice)</td>
+                <td>@Html.DisplayFor(modelItem => item.paymentType)</td>
+                <td>
+
+                    @if (@Session["userType"].ToString() == "Admin")
+                    {@Html.ActionLink("Delete", "DeleteCustomer", new { id = item.customerId })}
+
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+
+<script src="~/Content/jquery/dist/jquery.min.js"></script>
+
+
+<!-- Datatables -->
+<script>
+    $(document).ready(function () {
+        var handleDataTableButtons = function () {
+            if ($("#datatable-responsive").length) {
+                $("#datatable-responsive").DataTable({
+
+                    dom: "Blfrtip",
+                    buttons: [
+                      {
+                          extend: "copy",
+                          className: "btn-sm"
+                      },
+                      {
+                          extend: "csv",
+                          className: "btn-sm"
+                      },
+                      {
+                          extend: "excel",
+                          className: "btn-sm"
+                      },
+                      {
+                          extend: "pdfHtml5",
+                          className: "btn-sm"
+                      },
+                      {
+                          extend: "print",
+                          className: "btn-sm"
+                      },
+                    ],
+                    responsive: true,
+                });
+            }
+        };
+
+        TableManageButtons = function () {
+            "use strict";
+            return {
+
+                init: function () {
+                    handleDataTableButtons();
+                }
+            };
+        }();
+
+        TableManageButtons.init();
+    });
+</script>

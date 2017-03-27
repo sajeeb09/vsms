@@ -1,0 +1,45 @@
+﻿@model IEnumerable<VSMS.Data.brand>
+
+@{
+    ViewBag.Title = "Brand";
+    Layout = "~/Views/Shared/admin_layout.cshtml";
+}
+
+<h2>Brand</h2>
+
+<p>
+    @Html.ActionLink("Add New Brand", "CreateBrand")
+</p>
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.vehiclebrand)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.manufacturarId)
+        </th>
+        <th></th>
+    </tr>
+        </thead>
+    <tbody>
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.vehiclebrand)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.manufacturarId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditBrand", new { id=item.brandId }) |
+            @if (@Session["userType"].ToString() == "Admin") {@Html.ActionLink("Delete", "DeleteBrand", new { id=item.brandId })}
+        </td>
+    </tr>
+}
+</tbody>
+</table>
+<br><br>
+<div>
+    @Html.ActionLink("Back to Manufacturar List", "Manufacturar")
+</div>

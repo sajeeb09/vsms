@@ -1,0 +1,30 @@
+﻿@model VSMS.Data.user
+
+@{
+    ViewBag.Title = "VSMS Login";
+    Layout = "~/Views/Shared/Login_Layout.cshtml";
+}
+
+<h2 style="margin-bottom: 10%; text-align: center;">Dashboard Login</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <div class="form-group">
+        @Html.TextBoxFor(model => model.userName, new { id = "textbox", @class = "form-control", placeholder = "Username" })
+        @Html.ValidationMessageFor(model => model.userName, null, new { style = "color: red" })
+    </div>
+
+    <div class="form-group">
+        @Html.PasswordFor(model => model.userPass, new { id = "textbox", @class = "form-control", placeholder = "Password" })
+        @Html.ValidationMessageFor(model => model.userPass, null, new { style = "color: red;" })
+    </div>
+
+    <p class="errorMessage">@ViewData["error"]</p>
+    <p style="margin-top:10px;">
+        <button style="width:285px;margin: 0 auto;margin-left: auto;margin-right: auto;" class="btn btn-success btn-block" type="submit">Sign in</button>
+    </p>
+
+}

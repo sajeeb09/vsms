@@ -1,0 +1,112 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="~/Images/icon.png" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title VSMS</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/dashboard.css" rel="stylesheet">
+    <!-- Datatables -->
+    <link href="~/Content/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body onload="startTime()">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+
+                <img src="~/Images/icon.png" class="logo">
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right" style="margin-top:6px;">
+                    <li style="margin-right:15px;">
+                        <div class="navLink"><img src="~/Images/user.png" style="width:20px;height:20px;margin-right:5px;" />Welcome @Session["userName"]</div>
+                    </li>
+
+                    <li style="margin-right:15px;">
+                        <div class="navLink"><img src="~/Images/clock.png" style="width:20px;height:20px;margin-right:5px;" /><div style="display: initial;" id="txt"></div></div>
+                    </li>
+
+                    <li style="margin-right:15px;">
+                        <div class="navLink"><img src="~/Images/power.png" style="width:20px;height:20px;margin-right:5px;" />@Html.ActionLink("Logout", "Logout", "User", null, new { style = "color: white;font-weight:bold;" })</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <div class="col-sm-3 col-md-2 sidebar">
+
+        <ul class="nav nav-sidebar">
+            <li><div class="menuLink"><img src="~/Images/category2.png" style="width:22px;height:22px;margin-right:-10px;" />@Html.ActionLink("Dashboard", "LoggedIn", "User", null, new { style = "color: #a3a3a3;font-weight:bold;" })</li>
+            <li><div class="menuLink"><img src="~/Images/product.png" style="width:22px;height:22px;margin-right:-10px;" />@Html.ActionLink("Brands", "Manufacturar", "Vehicle", null, new { style = "color: #a3a3a3;font-weight:bold;" })</li>
+            <li><div class="menuLink"><img src="~/Images/product.png" style="width:22px;height:22px;margin-right:-10px;" />@Html.ActionLink("Vehicles", "Index", "Vehicle", null, new { style = "color: #a3a3a3;font-weight:bold;" })</li>
+            <li><div class="menuLink"><img src="~/Images/customer.png" style="width:22px;height:22px;margin-right:-10px;" />@Html.ActionLink("Customer", "Customer", "Vehicle", null, new { style = "color: #a3a3a3;font-weight:bold;" })</li>
+
+            @if (@Session["userType"].ToString() == "Admin")
+            {
+                <li><div class="menuLink"><img src="~/Images/Employee.png" style="width:22px;height:22px;margin-right:-10px;" />@Html.ActionLink("Employee", "UserList", "User", null, new { style = "color: #a3a3a3;font-weight:bold;" })</li>
+                <li><div class="menuLink"><img src="~/Images/report.png" style="width:22px;height:22px;margin-right:-10px;" />@Html.ActionLink("Report", "GetBestSelling", "Vehicle", null, new { style = "color: #a3a3a3;font-weight:bold;" })</li>
+            }
+
+
+        </ul>
+    </div>
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        @RenderBody()
+    </div>
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <!-- Datatables -->
+
+    <script src="~/Content/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="~/Content/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <script src="~/Content/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="~/Content/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+    <script src="~/Content/datatables.net-buttons/js/buttons.flash.min.js"></script>
+    <script src="~/Content/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="~/Content/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="~/Content/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+    <script src="~/Content/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+    <script src="~/Content/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="~/Content/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+    <script src="~/Content/datatables.net-scroller/js/datatables.scroller.min.js"></script>
+    <script src="~/Content/jszip/dist/jszip.min.js"></script>
+    <script src="~/Content/pdfmake/build/pdfmake.min.js"></script>
+    <script src="~/Content/pdfmake/build/vfs_fonts.js"></script>
+
+    <script>
+        function startTime() {
+            var today = new Date();
+            var h = today.getHours();
+            if (h > 12) { h -= 12; } else if (h === 0) { h = 12;}
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('txt').innerHTML =
+            h + ":" + m + ":" + s;
+            var t = setTimeout(startTime, 500);
+        }
+        function checkTime(i) {
+            if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
+            return i;
+        }
+    </script>
+
+</body>
+</html>

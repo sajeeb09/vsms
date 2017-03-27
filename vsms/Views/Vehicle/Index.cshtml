@@ -1,0 +1,125 @@
+﻿@model IEnumerable<VSMS.Data.vehicle>
+
+@{
+    ViewBag.Title = "All Vehicle";
+    Layout = "~/Views/Shared/admin_layout.cshtml";
+}
+
+<h2>All Vehicle List</h2>
+
+<p class="btn btn-success">
+    @Html.ActionLink("Add New Vehicle", "CreateVehicle")
+</p><br><br>
+
+<div class="">
+    <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+
+                <th>Model</th>
+                <th>Make</th>
+                <th>Brand</th>
+                <th>Chasis #</th>
+                <th>Engine #</th>
+                <th>Year</th>
+                <th>Color</th>
+                <th>Date</th>
+                <th>Bought $</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>Model</th>
+                <th>Make</th>
+                <th>Brand</th>
+                <th>Chasis #</th>
+                <th>Engine #</th>
+                <th>Year</th>
+                <th>Color</th>
+                <th>Date</th>
+                <th>Bought $</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </tfoot>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr class=" @(@item.status == "Available" ? "deafult" : "danger")">
+                <td>@Html.DisplayFor(modelItem => item.model) </td>
+                <td>@Html.DisplayFor(modelItem => item.vehiclemanufacturar) </td>
+                <td>@Html.DisplayFor(modelItem => item.vehiclebrand)</td>
+                <td>@Html.DisplayFor(modelItem => item.chasisNo) </td>
+                <td>@Html.DisplayFor(modelItem => item.engineNo) </td>
+                <td>@Html.DisplayFor(modelItem => item.mYear) </td>
+                <td>@Html.DisplayFor(modelItem => item.color) </td>
+                <td>@Html.DisplayFor(modelItem => item.bdate) </td>
+                <td>@Html.DisplayFor(modelItem => item.bprice) </td>
+                <td>@Html.DisplayFor(modelItem => item.status) </td>
+                <td>
+    @if (@item.status.ToString()=="Available") {@Html.ActionLink("Edit", "EditVehicle", new { id = item.vehicleId })} |
+    @Html.ActionLink("Details", "VehicleDetails", new { id = item.vehicleId }) |
+    @if (@Session["userType"].ToString() == "Admin") { @Html.ActionLink("Delete", "DeleteVehicle", new { id = item.vehicleId })}|
+    @if (@item.status.ToString()=="Available") { @Html.ActionLink("Sell", "Sell", new { id = item.vehicleId } )}
+    else { @item.status }
+                </td>
+            </tr>
+            }
+         
+        </tbody>
+    </table>
+
+</div>
+
+<script src="~/Content/jquery/dist/jquery.min.js"></script>
+
+<!-- Datatables -->
+<script>
+    $(document).ready(function () {
+        var handleDataTableButtons = function () {
+            if ($("#datatable-responsive").length) {
+                $("#datatable-responsive").DataTable({
+                  
+                    dom: "Blfrtip",
+                    buttons: [
+                      {
+                          extend: "copy",
+                          className: "btn-sm"
+                      },
+                      {
+                          extend: "csv",
+                          className: "btn-sm"
+                      },
+                      {
+                          extend: "excel",
+                          className: "btn-sm"
+                      },
+                      {
+                          extend: "pdfHtml5",
+                          className: "btn-sm"
+                      },
+                      {
+                          extend: "print",
+                          className: "btn-sm"
+                      },
+                    ],
+                    responsive: true,
+                });
+            }
+        };
+
+        TableManageButtons = function () {
+            "use strict";
+            return {
+
+                init: function () {
+                    handleDataTableButtons();
+                }
+            };
+        }();
+
+        TableManageButtons.init();
+    });
+</script>

@@ -1,0 +1,38 @@
+﻿@model IEnumerable<VSMS.Data.manufacturar>
+
+@{
+    ViewBag.Title = "Manufacturar";
+    Layout = "~/Views/Shared/admin_layout.cshtml";
+}
+
+<h2>Manufacturar</h2>
+
+<p>
+    @Html.ActionLink("Add New Manufacturar", "CreateManufacturar")    |   
+    @Html.ActionLink("Go to Models", "Brand")
+</p>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.vehiclemanufacturar)
+            </th>
+            <th>Action</th>
+        </tr>
+        </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.vehiclemanufacturar)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "EditManufacturar", new { id = item.manufacturarId }) |
+                    @if (@Session["userType"].ToString() == "Admin")
+                    {@Html.ActionLink("Delete", "DeleteManufacturar", new { id = item.manufacturarId })}
+                </td>
+            </tr>
+        }
+        </tbody>
+</table>

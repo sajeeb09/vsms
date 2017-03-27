@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>@ViewBag.Title VSMS</title>
+    <link rel="icon" href="~/Images/icon.png" type="image/x-icon" />
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="logo">
+            <img src="~/Images/icon.png" class="img-responsive" />
+        </div>
+
+
+        <div class="form-signin">
+            @RenderBody()
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+﻿@model VSMS.Data.brand
+
+@{
+    ViewBag.Title = "EditBrand";
+    Layout = "~/Views/Shared/admin_layout.cshtml";
+}
+
+<h2>EditBrand</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>brand</legend>
+
+        @Html.HiddenFor(model => model.brandId)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.vehiclebrand)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.vehiclebrand)
+            @Html.ValidationMessageFor(model => model.vehiclebrand)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.manufacturarId)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(model => model.manufacturarId, ViewBag.manu as SelectList, "-Select Manufacturar-")
+            @Html.ValidationMessageFor(model => model.manufacturar)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to Brand List", "Brand")
+</div>
+<div>
+    @Html.ActionLink("Back to Manufacturar List", "Manufacturar")
+</div>

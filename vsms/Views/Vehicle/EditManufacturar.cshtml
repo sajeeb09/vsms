@@ -1,0 +1,35 @@
+﻿@model VSMS.Data.manufacturar
+
+@{
+    ViewBag.Title = "EditManufacturar";
+    Layout = "~/Views/Shared/admin_layout.cshtml";
+}
+
+<h2>EditManufacturar</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>manufacturar</legend>
+
+        @Html.HiddenFor(model => model.manufacturarId)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.vehiclemanufacturar)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.vehiclemanufacturar)
+            @Html.ValidationMessageFor(model => model.vehiclemanufacturar)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "manufacturar")
+</div>
